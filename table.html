@@ -3,21 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <title>Table</title>
+    <!-- Adding style to the Grid to keep it visible-->
+    <style> 
+        div {
+            border-style:solid;
+            border-color:black;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
 </head>
-<body>
-    <div>
-        <a href="./index.html"> Home </a>
-        <a href="./table.html"> Table </a>
-        <a href="./form.html"> Form </a>
-    </div>
+<body class="bg-secondary"> 
 
+    <nav class="navbar navbar-expand-sm Navbar-dark .bg-primary.bg-gradient">
+        
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <!-- Hamburger icon when screen is small-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <!-- Table link showing top 3 albums.-->
+                  <a class="nav-link" href="./table.html">Records</a>
+                </li>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+    <div id="main-container" class="container bg-light pt-2 pb-5">
+        <div>
+                
     <table> <!-- This table will be showing the stats of Ariana's top 3 albums-->
         <tr> 
             <th>Album</th>
             <th>Streams</th>
             <th>Units Sold</th>
         </tr>
+       
         <tr> 
             <td> Thank u, Next</td>
             <td> 8,492,780,388</td>
@@ -43,5 +77,6 @@
 
     <img height="200px"
     src="./images/MyEverything.jpg"> 
+
 </body>
 </html>

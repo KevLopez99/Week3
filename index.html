@@ -5,42 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <title>HTML Solution - 1</title>
+    <!-- Adding small style for the grid to be visible-->
+    <style> 
+        div {
+            border-style: solid;
+            border-color: black;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
 </head>
-<body>
-    <!-- Create a website using only HTML. The website can be anything you like (within school guidelines) if it meets the following criteria:
-    Create a homepage named index.html
-    1)At least 3 pages with links to navigate between all pages present on each page. (DONE)
-    2)2 different size headers (DONE)
-    3)a list (DONE)
-    4)3 images(DONE)
-    5)a table (DONE)
-    6)a form (DONE)
-
-    <div>
-        <a href=""> Home </a>
-        <a href="./table.html"> Table </a>
-        <a href="./form.html"> Form </a>
-    </div>
-
-    <!-The main title of my first website -->
-
-    <h1> Ariana Grande's Top Albums! </h1>
-    <div>
-        <a href="./index.html"> Home </a>
-        <a href="./table.html"> Table </a>
-        <a href="./form.html"> Form </a>
-    </div>
+<!-- WEEK 3 LAB: (Using Ariana's Website from week 1 and implementing Bootstrap)
+ CODING STEPS:
+ 1) Navbar, table, form (DONE)
+ 2) Bootstrap grid used throughout to format elements (Check bootstrap 5 site)
+ 3) Elements should stack vertically when the window is small (done)
+ note - Hamburger icon doesn't drop??
+-->
+<body class="bg-secondary"> 
+<!-- Main NavBar code under this-->
+    <nav class="navbar navbar-expand-sm Navbar-dark .bg-primary.bg-gradient">
+        
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+            <!-- Hamburger icon when screen is small-->
+             <!-- Burger icon drop down?-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-3">
+                <!-- HOME BUTTON IN NAVBAR: Takes you to the homepage-->
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                     <!-- RECORDS BUTTON: Takes you to 2nd page of website. 
+                      Shows a table of top 3 albums-->
+                  <a class="nav-link" href="./table.html">Records</a>
+                </li>
+                <!-- Search bar form in Navbar-->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+    <div id="main-container" class="container bg-light pt-2 pb-5">
+        <div>
+      
+    <h1> Ariana Grande's Career </h1>
     <img 
     height="200px"
     src="./images/ArianaGrande.jpg">
-    <div class="card" style="width: 18rem;">
-        <img src="./images/ArianaGrande.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
     <p> Ariana Grande is one of the world's most successful arists. Check out her career!</p>
 
 
@@ -77,7 +97,37 @@
         <img height="200px"
         src="./images/External Sunshine.jpg "> 
     
-
+        <!--Grid at the bottom of the first page of the website
+        1- Buttons just for display (doesn't take you anywhere)
+        2-History/Career
+        3-Adding a form at the bottom. 
+        -->
+        
+        <div class="container">
+            <div class="row-md">
+              <div class="col-lg-6">
+                Ariana's History
+                <button> Click Me </button>
+              </div>
+              <div class="col-lg-6">
+                Career
+                <button> Click Me</button>
+              </div>
+            </div>
+            
+          
+<!-- First form of the assignment I added-->
+        <h3> Let us know your favorite artist and check our their stats! </h3>
+        <form>
+            <label> First Name: </label>
+            <input type="text" name="firstname" placeholder="First Name">
+            <label> Last Name:</label>
+            <input type="text" name="Lastname" placeholder="Last Name">
+            <label> Email: </label>
+            <input type="text" name="Email" placeholder="Email">
+            <button> Submit </button>
+        
+        </form>
 
     </table>
 
